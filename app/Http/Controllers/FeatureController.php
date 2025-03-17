@@ -13,8 +13,6 @@ class featureController extends Controller
         $data = DB::table('features') -> get();
 
         // Pass the data to the view using the compact helper.
-        return view('features')->with([
-                    'categories' => $data
-                   ]);
+        return view('features', ['data' => $data]);
     }
 }
